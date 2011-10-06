@@ -112,6 +112,8 @@ module GitHosting
 			parent_parts.unshift(parent_id)
 			p = p.parent
 		end
+        top_level = Setting.plugin_redmine_git_hosting['gitTopLevelFolder']
+        parent_parts.unshift(top_level) if top_level
 		return is_file_path ? File.join(parent_parts) : parent_parts.join("/")
 	end
 

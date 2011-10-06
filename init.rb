@@ -17,6 +17,7 @@ Redmine::Plugin.register :redmine_git_hosting do
 		'gitServer' => 'localhost',
 		'gitUser' => 'git',
         'gitConfigFile' => 'gitolite.conf',
+        'gitTopLevelFolder' => 'projects',
         'gitAdminUser' => 'git-admin',
         'gitIdPrefix' => 'redmine_',
         'gitIdSuffix' => '',

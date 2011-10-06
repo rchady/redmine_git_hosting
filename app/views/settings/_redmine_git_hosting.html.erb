@@ -38,6 +38,13 @@
     </p>
 
     <p>
+      <label><%= l(:label_git_top_level_folder)%></label>
+      <%= text_field_tag("settings[gitTopLevelFolder]",
+      @settings['gitTopLevelFolder'].split(/[\r\n\t ,;]+/).join("\n"), :size => 60) %>
+               <br />
+    </p>
+
+    <p>
       <label><%= l(:label_git_id_prefix)%></label>
       <%= text_field_tag("settings[gitIdPrefix]", @settings['gitIdPrefix'].split(/[\r\n\t ,;]+/).join("\n"), :size => 60) %>
                <br />
